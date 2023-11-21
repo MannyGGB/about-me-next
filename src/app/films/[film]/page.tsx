@@ -15,6 +15,7 @@ export default function FilmPage({ params }: filmParam) {
     <div>
       <h3>Film Page: {capitalisedTitle}</h3>
       <Link href="/films">{`<-- Go Back`}</Link>
+      <p>More info coming soon.</p>
     </div>
   );
 }

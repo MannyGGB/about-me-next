@@ -38,6 +38,12 @@ let films: filmsType[] = [
       "https://m.media-amazon.com/images/M/MV5BZTA1ODE3ZDAtMDVkNi00ODAxLWE1MjUtNDAyOWVhZWNjYjUxXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
     year: 1982,
   },
+  {
+    name: "Mean Girls",
+    poster:
+      "https://resizing.flixster.com/HtZiEfthbBdM_Idd_OB4ZsyfgMk=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzI2MTVlZjAyLTc1NTAtNGE2Zi1iNzk0LTQxN2ZmMTIyYzRiMC5qcGc=",
+    year: 2004,
+  },
 ];
 
 function compareFilms(a: filmsType, b: filmsType) {
@@ -63,18 +69,26 @@ export default function FilmsPage({
   }
 
   return (
-    <main className="flex flex-row justify-evenly">
-      <h3>Film Collection</h3>
-      <br />
-      <Link href="/films?sortBy=asc">Sort by alphabetical order</Link>
-      <Link href="/films?sortBy=desc">Sort by reverse alphabetical order</Link>
-
+    <main>
+      <h3 className="text-center p-10 text-xl ">Film Collection</h3>
+      <nav className="flex flex-row justify-evenly">
+        <Link href="/films?sortBy=asc">Sort by alphabetical order</Link>
+        <Link href="/films?sortBy=desc">
+          Sort by reverse alphabetical order
+        </Link>
+      </nav>
       {sortedFilms.map((film) => {
         return (
-          <section className="m-14" key={film.name}>
-            <br />
+          <section
+            className="flex flex-col flex-wrap items-center m-14"
+            key={film.name}
+          >
             <Link href={`/films/${film.name.toLowerCase()}`}>{film.name}</Link>
-            <img src={film.poster} alt={film.poster} />
+            <img
+              className="w-80 h-96 m-10 rounded"
+              src={film.poster}
+              alt={film.poster}
+            />
             <p>{film.year}</p>
           </section>
         );

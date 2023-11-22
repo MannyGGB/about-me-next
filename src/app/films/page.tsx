@@ -72,24 +72,27 @@ export default function FilmsPage({
     <main>
       <h3 className="text-center p-10 text-xl ">Film Collection</h3>
       <nav className="flex flex-row justify-evenly">
-        <Link href="/films?sortBy=asc">Sort by alphabetical order</Link>
-        <Link href="/films?sortBy=desc">
-          Sort by reverse alphabetical order
-        </Link>
+        <Link href="/films?sortBy=asc">A-Z</Link>
+        <Link href="/films?sortBy=desc">Z-A</Link>
       </nav>
       {sortedFilms.map((film) => {
         return (
           <section
-            className="flex flex-col flex-wrap items-center m-14"
+            className="flex flex-col flex-wrap items-center m-14 bg-gradient-to-b from-amber-200 to-orange-600 rounded"
             key={film.name}
           >
-            <Link href={`/films/${film.name.toLowerCase()}`}>{film.name}</Link>
+            <Link
+              href={`/films/${film.name.toLowerCase()}`}
+              className="text-sky-900 font-semibold"
+            >
+              {film.name}
+            </Link>
             <img
               className="w-80 h-96 m-10 rounded"
               src={film.poster}
-              alt={film.poster}
+              alt={film.name}
             />
-            <p>{film.year}</p>
+            <p className="text-sky-900 font-semibold">{film.year}</p>
           </section>
         );
       })}

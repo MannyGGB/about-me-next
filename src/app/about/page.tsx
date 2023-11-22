@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 export default function AboutRoute() {
   return (
     <main>
@@ -11,6 +11,13 @@ export default function AboutRoute() {
           developer.
         </p>
       </article>
+      <Image
+        src="/oriole.jpg"
+        width={1200}
+        height={635}
+        alt="oriole"
+        className="w-300 h-200 m-20 rounded"
+      />
     </main>
   );
 }

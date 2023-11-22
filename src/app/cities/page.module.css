@@ -1,0 +1,20 @@
+.citiesSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(175, 174, 96);
+  background: linear-gradient(
+    90deg,
+    rgba(175, 174, 96, 1) 27%,
+    rgba(105, 80, 245, 1) 51%,
+    rgba(255, 0, 34, 1) 87%
+  );
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.citiesImage {
+  width: 500px;
+  height: 300px;
+}

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <>
@@ -7,6 +9,7 @@ export default function Home() {
           Here you can find information about me, my favourite films and cities
           I have visited before.
         </p>
+        <Image src="/dragon.png" width={512} height={512} alt="dragon" />
       </main>
     </>
   );

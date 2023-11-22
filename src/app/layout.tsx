@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Head from "next/head";
 import "./globals.css";
-import { Inter } from "next/font/google";
-const inter = Inter({ subsets: ["latin"] });
+import { Inter, Nunito } from "next/font/google";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
@@ -11,6 +10,8 @@ export const metadata: Metadata = {
   description: "A page about my favourite things",
 };
 
+const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito({ subsets: ["latin"] });
 export default function RootLayout({
   children,
 }: {
@@ -21,8 +22,9 @@ export default function RootLayout({
       <Head>
         <link rel="icon" href="./favicon.ico" sizes="any" />
       </Head>
+
       <body
-        className={`${inter.className}flex min-h-screen flex-col items-center justify-between x p-10 bg-gradient-to-tr from-amber-300 to-violet-900 text-white`}
+        className={`${nunito.className} bg-gradient-to-tr from-amber-300 to-violet-900`}
       >
         <Header />
         {children}

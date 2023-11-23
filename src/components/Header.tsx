@@ -14,6 +14,7 @@ export default function Header() {
         <Link href="/about">About Me</Link>
         <Link href="/films">My Films</Link>
         <Link href="/cities">My Cities</Link>
+        <Link href="/blogs">My Blog</Link>
       </nav>
     </header>
   );
